@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Project</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="#" id="form">
+            <fieldset>
+                <legend>User Details</legend>
+                <div class="row">
+                   <p>First Name : <input type="text" class="input" id="firstName"></p>
+                   <p>First Name : <input type="text" class="input" id="lastLast"></p>
+                </div>
+                <div class="row">
+                    <p>Email : <input type="email" class="input" id="email"></p>
+                    <p>Phone Number : <input type="number" class="input" id="phn"></p>
+                 </div>
+                 <div class="row">
+                    <button onclick="getDetails()">save</button>
+                 </div>
+            </fieldset>
+        </form>
+        <div class="table">
+            
+            <div class="row">
+                <button onclick="displayUsers()">display users</button>
+                <button onclick="addUser()">add user</button>
+            </div>
+            <table id="table">
+                <tr>
+                    <th>Student Id</th>
+                    <th> First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>
