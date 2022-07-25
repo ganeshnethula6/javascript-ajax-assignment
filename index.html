@@ -16,12 +16,16 @@
             <fieldset>
                 <legend>User Details</legend>
                 <div class="row">
-                   <p>First Name : <input type="text" class="input" id="firstName"></p>
-                   <p>First Name : <input type="text" class="input" id="lastLast"></p>
-                </div>
+                    <p id="studentInput">Student Id : <input type="number" onclick="validateStuId(value)" onchange="validateStuId(value)" class="input" id="stuId"> <strong id="sidErrorMsg"></strong></p>
+                   <p>First Name : <input type="text" onchange="validateFirstName(value)" onclick="validateFirstName(value)" class="input" id="firstName"><strong id="fnErrorMsg"></strong></p>
+                   <p>Last Name : <input type="text" onchange="validateLastName(value)" onclick="validateLastName(value)" class="input" id="lastName"><strong id="lnErrorMsg"></strong></p>
+                </div> 
                 <div class="row">
-                    <p>Email : <input type="email" class="input" id="email"></p>
-                    <p>Phone Number : <input type="number" class="input" id="phn"></p>
+                    <p>Email : <input type="email" onchange="validateEmail(value)" onclick="validateEmail(value)" class="input" id="email"><strong id="emailErrorMsg"></strong></p>
+                    <p>Phone Number : <input type="number" maxlength="10" onchange="validatePhoneNumber(value)" onclick="validatePhoneNumber(value)" class="input" id="phn"><strong id="pnErrorMsg"></strong></p>
+                 </div>
+                 <div class="row">
+                    <p id="errorMsg"></p>
                  </div>
                  <div class="row">
                     <button onclick="getDetails()">save</button>
